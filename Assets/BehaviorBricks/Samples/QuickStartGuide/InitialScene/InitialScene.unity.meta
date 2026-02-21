@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 5db99781d8e629149aa15a975f39c69d
+DefaultImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 74816
+  packageName: Behavior Bricks
+  packageVersion: 1.0.3
+  assetPath: Assets/BehaviorBricks/Samples/QuickStartGuide/InitialScene/InitialScene.unity
+  uploadId: 668087

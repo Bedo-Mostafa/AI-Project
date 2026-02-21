@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0057c6ff34fa5324c972d374cb4d9ec8
+timeCreated: 1460714511
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 74816
+  packageName: Behavior Bricks
+  packageVersion: 1.0.3
+  assetPath: Assets/BehaviorBricks/Samples/QuickStartGuide/InitialScene/NavMesh.asset
+  uploadId: 668087

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cefec543fe1d8774aa0b18d5ab374a84
+timeCreated: 1461662917
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 74816
+  packageName: Behavior Bricks
+  packageVersion: 1.0.3
+  assetPath: Assets/BehaviorBricks/Samples/ProgrammersQuickStartGuide/Done/Resources/Behaviors/DoneEnemyBehavior.asset
+  uploadId: 668087

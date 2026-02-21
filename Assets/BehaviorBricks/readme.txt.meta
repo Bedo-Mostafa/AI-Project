@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: be441ad848f615d489517ea63f800a41
+timeCreated: 1527258556
+licenseType: Store
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 74816
+  packageName: Behavior Bricks
+  packageVersion: 1.0.3
+  assetPath: Assets/BehaviorBricks/readme.txt
+  uploadId: 668087

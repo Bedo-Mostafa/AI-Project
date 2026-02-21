@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6c77abc6244c7604a93f480b49b233c5
+timeCreated: 1460711078
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 74816
+  packageName: Behavior Bricks
+  packageVersion: 1.0.3
+  assetPath: Assets/BehaviorBricks/Samples/QuickStartGuide/Done/Resources/Behaviors/DoneClickAndGo.asset
+  uploadId: 668087
