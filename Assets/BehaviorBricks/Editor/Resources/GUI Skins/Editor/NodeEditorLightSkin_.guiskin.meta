@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 58a23eb16ef6ad849a52e8f59ae1aaa8
+timeCreated: 1486375743
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 74816
+  packageName: Behavior Bricks
+  packageVersion: 1.0.3
+  assetPath: Assets/BehaviorBricks/Editor/Resources/GUI Skins/Editor/NodeEditorLightSkin_.guiskin
+  uploadId: 668087

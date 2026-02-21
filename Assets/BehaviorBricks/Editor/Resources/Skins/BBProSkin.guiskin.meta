@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 241b309db67a4b44aa82119f5203244d
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 74816
+  packageName: Behavior Bricks
+  packageVersion: 1.0.3
+  assetPath: Assets/BehaviorBricks/Editor/Resources/Skins/BBProSkin.guiskin
+  uploadId: 668087

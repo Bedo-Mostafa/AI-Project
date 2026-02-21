@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 94f7b8d9d503df647aec1b5cdce03b4b
+timeCreated: 1460713897
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 74816
+  packageName: Behavior Bricks
+  packageVersion: 1.0.3
+  assetPath: Assets/BehaviorBricks/Samples/QuickStartGuide/Done/Resources/Behaviors/DoneAbortableClickAndGo.asset
+  uploadId: 668087
