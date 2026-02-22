@@ -11,11 +11,11 @@
   <Project Path="Unity.Collections.csproj" />
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.Editor.csproj" />
+  <Project Path="Unity.Splines.csproj" />
   <Project Path="Unity.AppUI.Redux.csproj" />
   <Project Path="Unity.Burst.csproj" />
-  <Project Path="Unity.VisualScripting.Flow.Editor.csproj" />
   <Project Path="Unity.Behavior.csproj" />
-  <Project Path="Unity.Splines.csproj" />
+  <Project Path="Unity.VisualScripting.Flow.Editor.csproj" />
   <Project Path="Unity.VisualStudio.Editor.csproj" />
   <Project Path="Unity.InputSystem.csproj" />
   <Project Path="Unity.Behavior.Serialization.csproj" />
