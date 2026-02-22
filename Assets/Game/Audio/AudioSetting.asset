@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787b7d80312d81540afe5d9b82f9e307, type: 3}
+  m_Name: AudioSetting
+  m_EditorClassIdentifier: Assembly-CSharp::AudioSetting
+  audioMixer: {fileID: 24100000, guid: 9c58eabc9f6582946bc28979c298525b, type: 2}
+  masterGroup: {fileID: 24300002, guid: 9c58eabc9f6582946bc28979c298525b, type: 2}
+  sfxGroup: {fileID: -6671931080715596549, guid: 9c58eabc9f6582946bc28979c298525b, type: 2}
+  musicGroup: {fileID: -1088297527542809024, guid: 9c58eabc9f6582946bc28979c298525b, type: 2}
+  masterVolume: 1
+  sfxVolume: 1
+  musicVolume: 1
+  masterParam: Master
+  sfxParam: SFX
+  musicParam: Background
