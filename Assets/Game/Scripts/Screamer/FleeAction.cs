@@ -28,7 +28,7 @@ public class FleeAction : GOAction
         if (agent == null || player == null) return TaskStatus.FAILED;
 
         agent.SetDestination(fleeTarget);
-        animator.SetBool("IsMoving", true);
+        animator?.SetBool("IsMoving", true);
 
         if (!agent.pathPending && agent.remainingDistance < agent.stoppingDistance)
         {
@@ -36,7 +36,7 @@ public class FleeAction : GOAction
 
             if (distToPlayer >= safeDistance)
             {
-                if (animator != null) animator.SetBool("IsMoving", false);
+                animator?.SetBool("IsMoving", false);
                 return TaskStatus.COMPLETED;
             }
 
