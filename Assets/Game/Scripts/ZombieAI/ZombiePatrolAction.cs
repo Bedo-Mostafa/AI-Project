@@ -29,7 +29,7 @@ public class ZombiePatrolAction : GOAction
             agent.SetDestination(target.position);
 
             // Just tell the Animator to Walk. Root Motion will handle the speed.
-            if (animator != null) animator.SetFloat("Speed", 1f);
+            if (animator != null) animator.SetFloat("Speed", 0f);
         }
 
         if (Vector3.Distance(gameObject.transform.position, target.position) < 1.5f)
