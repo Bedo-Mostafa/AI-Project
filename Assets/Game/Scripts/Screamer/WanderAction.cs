@@ -32,7 +32,7 @@ public class WanderAction : GOAction
 
         if (isWaiting)
         {
-            animator.SetBool("IsMoving", false);
+            animator?.SetBool("IsMoving", false);
 
             waitTimer -= Time.deltaTime;
             if (waitTimer <= 0f)
@@ -44,7 +44,7 @@ public class WanderAction : GOAction
         }
 
         agent.SetDestination(wanderTarget);
-        animator.SetBool("IsMoving", true);
+        animator?.SetBool("IsMoving", true);
 
         if (!agent.pathPending && agent.remainingDistance < agent.stoppingDistance)
         {
