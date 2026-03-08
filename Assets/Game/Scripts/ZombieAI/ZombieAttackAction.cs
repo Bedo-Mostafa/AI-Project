@@ -56,9 +56,20 @@ public class ZombieAttackAction : GOAction
         if (!hasDealtDamage && elapsedTime >= (attackDuration * hitTiming))
         {
             PlayerHealth ph = player.GetComponent<PlayerHealth>();
-            if (ph != null) ph.TakeDamage(attackDamage);
+
+            // Safety check: Only deal damage and log health if the target actually has a health script
+            if (ph != null)
+            {
+                ph.TakeDamage(attackDamage);
+                Debug.Log($"Player Health: {ph.health}");
+            }
+            else
+            {
+                // This tells us what the zombie is mistakenly targeting!
+                Debug.LogWarning($"[Zombie] Tried to attack {player.name}, but it has no PlayerHealth script!");
+            }
+
             hasDealtDamage = true;
-            Debug.Log(ph.health);
         }
 
         if (elapsedTime >= attackDuration)
