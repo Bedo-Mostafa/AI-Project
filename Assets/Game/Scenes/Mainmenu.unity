@@ -683,8 +683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Nobi.UiRoundedCorners::Nobi.UiRoundedCorners.ImageWithRoundedCorners
-  radius: 40
-  image: {fileID: 0}
 --- !u!222 &151782454
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1069,8 +1067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Nobi.UiRoundedCorners::Nobi.UiRoundedCorners.ImageWithRoundedCorners
-  radius: 40
-  image: {fileID: 0}
 --- !u!114 &248366203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1487,8 +1483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Nobi.UiRoundedCorners::Nobi.UiRoundedCorners.ImageWithRoundedCorners
-  radius: 40
-  image: {fileID: 0}
 --- !u!222 &340666943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2153,6 +2147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3919319f4dc2d4748ad9e81ea76d45ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverTween
+  hoverScale: 1.1
+  duration: 0.2
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!114 &549419143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2483,8 +2482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Nobi.UiRoundedCorners::Nobi.UiRoundedCorners.ImageWithRoundedCorners
-  radius: 40
-  image: {fileID: 0}
 --- !u!222 &679692386
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2657,8 +2654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Nobi.UiRoundedCorners::Nobi.UiRoundedCorners.ImageWithRoundedCorners
-  radius: 40
-  image: {fileID: 0}
 --- !u!114 &707847261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3388,10 +3383,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d50862efd7b9194abec2d79c8c634ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioSlidersController
-  settings: {fileID: 0}
-  masterSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
-  musicSlider: {fileID: 0}
+  settings: {fileID: 11400000, guid: 629354c5b8a522d4b85df07d0f93c77b, type: 2}
+  masterSlider: {fileID: 415908914}
+  sfxSlider: {fileID: 497682575}
+  musicSlider: {fileID: 1242103792}
   masterValueText: {fileID: 0}
   sfxValueText: {fileID: 0}
   musicValueText: {fileID: 0}
@@ -3896,8 +3891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98932b4bdd4f2b64d953775a1f060ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloseRenderFeaature
-  rendererData: {fileID: 11400000, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
-  featureName: Glitch Screen Shader
 --- !u!1 &1075429904
 GameObject:
   m_ObjectHideFlags: 0
@@ -5004,7 +4997,6 @@ GameObject:
   - component: {fileID: 1288035055}
   - component: {fileID: 1288035058}
   - component: {fileID: 1288035059}
-  - component: {fileID: 1288035060}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5162,19 +5154,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
---- !u!114 &1288035060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288035054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e85c5c31dd277a4d9ca478d84dff325, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RotateSkyBox
-  rotationSpeed: 1.2
 --- !u!1 &1295466381
 GameObject:
   m_ObjectHideFlags: 0
@@ -5383,8 +5362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Nobi.UiRoundedCorners::Nobi.UiRoundedCorners.ImageWithRoundedCorners
-  radius: 40
-  image: {fileID: 0}
 --- !u!1 &1304676170
 GameObject:
   m_ObjectHideFlags: 0
@@ -6909,8 +6886,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Nobi.UiRoundedCorners::Nobi.UiRoundedCorners.ImageWithRoundedCorners
-  radius: 40
-  image: {fileID: 0}
 --- !u!1 &1866379194
 GameObject:
   m_ObjectHideFlags: 0
@@ -7183,8 +7158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Nobi.UiRoundedCorners::Nobi.UiRoundedCorners.ImageWithRoundedCorners
-  radius: 40
-  image: {fileID: 0}
 --- !u!114 &1869853381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7467,6 +7440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3919319f4dc2d4748ad9e81ea76d45ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverTween
+  hoverScale: 1.1
+  duration: 0.2
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!114 &1885419321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7618,7 +7596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d703da592a0fe424792aa76f2c56cb71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  settings: {fileID: 0}
+  settings: {fileID: 11400000, guid: 629354c5b8a522d4b85df07d0f93c77b, type: 2}
   poolSize: 16
   allowPoolExpansion: 1
   maxPoolSize: 64
@@ -8262,6 +8240,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3919319f4dc2d4748ad9e81ea76d45ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverTween
+  hoverScale: 1.1
+  duration: 0.2
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!114 &2116250320
 MonoBehaviour:
   m_ObjectHideFlags: 0
