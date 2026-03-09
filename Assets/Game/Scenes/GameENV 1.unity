@@ -3796,13 +3796,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 1
-<<<<<<< HEAD
-  m_Color: {r: 0.28022364, g: 0.23331428, b: 0.3735848, a: 1}
-  m_Intensity: 3
-=======
   m_Color: {r: 0.44110024, g: 0.38878602, b: 0.6150943, a: 1}
   m_Intensity: 0.8
->>>>>>> a7d151b (adding main menu and fart effecy)
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

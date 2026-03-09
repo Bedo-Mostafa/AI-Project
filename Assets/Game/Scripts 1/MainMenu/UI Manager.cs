@@ -22,11 +22,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private List<Button> buttons;
     private bool isTransitioning = false;
-    CloseRenderFeaature closeRenderFeaature;
     private void Start()
     {
-        closeRenderFeaature = GetComponent<CloseRenderFeaature>();
-        closeRenderFeaature.DisableFeature();
+      
     }
     public void switchToOptionsCanvas()
     {
