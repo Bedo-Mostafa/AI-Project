@@ -17,8 +17,7 @@ MonoBehaviour:
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
     id=\"0\" guid=\"5570fc97c83f3e643b85943917f53c25\" nextId=\"14\">\r\n      <root>\r\n       
     <RepeatDecorator id=\"13\" />\r\n      </root>\r\n      <inputParams>\r\n       
-    <inputValues>\r\n          <entry name=\"Player\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"False\" />\r\n          <entry name=\"Attack Damage\" type=\"System.Single\"
+    <inputValues>\r\n          <entry name=\"Attack Damage\" type=\"System.Single\"
     isBlackboard=\"False\" value=\"0\" />\r\n          <entry name=\"Range Threshold\"
     type=\"System.Single\" isBlackboard=\"False\" value=\"0\" />\r\n          <entry
     name=\"ChaseDist\" type=\"System.Single\" isBlackboard=\"False\" value=\"0\"
@@ -169,6 +168,6 @@ MonoBehaviour:
     description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"10\" />\r\n          <SequenceNode
     id=\"7\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.5
+  zoom: 0.7
   subslist: []
   _guid: 5570fc97c83f3e643b85943917f53c25

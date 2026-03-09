@@ -7,11 +7,13 @@ using BBUnity.Actions;
 [Action("Zombie/Attack")]
 public class ZombieAttackAction : GOAction
 {
-    [InParam("Player")] public GameObject player;
+    // [InParam("Player")] public GameObject player;
     [InParam("Attack Damage")] public float attackDamage = 10f;
     [InParam("Clip Name")] public string clipName = "Attack";
     [InParam("Hit Timing (0 to 1)")] public float hitTiming = 0.5f;
 
+    private GameObject player;
+    private ZombieController controller; // Reference to our main script
     private float attackDuration = 1.0f;
     private float attackStartTime;
     private bool hasDealtDamage;
@@ -22,6 +24,13 @@ public class ZombieAttackAction : GOAction
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         animator = gameObject.GetComponent<Animator>();
+        controller = gameObject.GetComponent<ZombieController>();
+
+        // Get the dynamic player reference from the controller
+        if (controller != null)
+        {
+            player = controller.player;
+        }
         hasDealtDamage = false;
 
         FindAnimationDuration();
