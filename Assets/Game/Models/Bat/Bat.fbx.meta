@@ -13,17 +13,17 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: b164ce4824d94c06a0f50e0745863202_N_GIANT_BAT_NRM
-    second: {fileID: 2800000, guid: 20dace9d13a5b254e9bb38f8c519d984, type: 3}
+    second: {fileID: 2800000, guid: d8498fb1cc4315b4bbac4d201136dc16, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: e7f9c578273c477ab45092229391eb80_RGB_GIANT_BAT_ILLUM
-    second: {fileID: 2800000, guid: fe00a0426c5d68540ac31e3e187f1409, type: 3}
+    second: {fileID: 2800000, guid: b249e0b0db459dd458a21cf7cf6fd256, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: fffd1c9feb694a93be0e2d764cf31ccd_RGB_GIANT_BAT_BaseColor
-    second: {fileID: 2800000, guid: 393b14a5bbd566d4ca83d98cd1ebb569, type: 3}
+    second: {fileID: 2800000, guid: 7b12acff32837454ca2888ee895fb176, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

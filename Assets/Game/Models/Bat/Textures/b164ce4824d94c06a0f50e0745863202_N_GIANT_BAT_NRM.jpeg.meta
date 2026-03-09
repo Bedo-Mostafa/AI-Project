@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Game/Models/Bat/Textures/b164ce4824d94c06a0f50e0745863202_N_GIANT_BAT_NRM.jpeg.meta
-guid: 20dace9d13a5b254e9bb38f8c519d984
-========
-guid: 0a9be0e727574c34d9695b80b72cd877
->>>>>>>> main:Assets/3RDParty/EasyTransitions/Sprites/TransitionPrefabIcon.png.meta
+guid: d8498fb1cc4315b4bbac4d201136dc16
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -41,31 +37,24 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-<<<<<<<< HEAD:Assets/Game/Models/Bat/Textures/b164ce4824d94c06a0f50e0745863202_N_GIANT_BAT_NRM.jpeg.meta
     wrapU: 0
     wrapV: 0
     wrapW: 0
   nPOTScale: 1
-========
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
-  nPOTScale: 0
->>>>>>>> main:Assets/3RDParty/EasyTransitions/Sprites/TransitionPrefabIcon.png.meta
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 0
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -80,14 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<<< HEAD:Assets/Game/Models/Bat/Textures/b164ce4824d94c06a0f50e0745863202_N_GIANT_BAT_NRM.jpeg.meta
     textureCompression: 1
-========
-    textureCompression: 0
->>>>>>>> main:Assets/3RDParty/EasyTransitions/Sprites/TransitionPrefabIcon.png.meta
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,14 +82,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<<< HEAD:Assets/Game/Models/Bat/Textures/b164ce4824d94c06a0f50e0745863202_N_GIANT_BAT_NRM.jpeg.meta
     textureCompression: 1
-========
-    textureCompression: 0
->>>>>>>> main:Assets/3RDParty/EasyTransitions/Sprites/TransitionPrefabIcon.png.meta
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,7 +100,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -134,13 +115,3 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-<<<<<<<< HEAD:Assets/Game/Models/Bat/Textures/b164ce4824d94c06a0f50e0745863202_N_GIANT_BAT_NRM.jpeg.meta
-========
-AssetOrigin:
-  serializedVersion: 1
-  productId: 225607
-  packageName: Easy Transitions
-  packageVersion: 1.4
-  assetPath: Assets/3RDParty/EasyTransitions/Sprites/TransitionPrefabIcon.png
-  uploadId: 587727
->>>>>>>> main:Assets/3RDParty/EasyTransitions/Sprites/TransitionPrefabIcon.png.meta
