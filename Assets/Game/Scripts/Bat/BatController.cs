@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 /// <summary>
 /// Central state hub for the bat enemy AI.
@@ -15,6 +16,7 @@ public class BatController : MonoBehaviour
     [SerializeField] private float _fallSpeed = 5f;
     [SerializeField] private float _groundCheckDist = 50f;
     [SerializeField] private LayerMask _groundMask;
+    [SerializeField] private float _despawnDelay = 10f;
 
     [Header("AI Parameters")]
     public Transform PlayerTarget;     // Assign the Player in the Inspector
@@ -26,6 +28,8 @@ public class BatController : MonoBehaviour
     public float MoveSpeed = 4f;
     public float DiveSpeed = 6f;
     public float HeightThreshold = 1f;
+    public float SeparationRadius = 3f;   // Min distance between bats
+    public float SeparationForce = 5f;   // How strongly they push apart
 
     public bool IsAtPlayerHeight = false;
     public bool playerDetected = false;
@@ -62,6 +66,27 @@ public class BatController : MonoBehaviour
 
         CheckDetection();
         CheckPlayerHealth();
+        ApplySeparation();
+    }
+
+    private void ApplySeparation()
+    {
+        if (!IsAlive) return;
+
+        Collider[] nearby = Physics.OverlapSphere(transform.position, SeparationRadius);
+        Vector3 push = Vector3.zero;
+
+        foreach (Collider col in nearby)
+        {
+            if (col.gameObject == gameObject) continue;
+            if (!col.TryGetComponent<BatController>(out _)) continue;
+
+            Vector3 away = transform.position - col.transform.position;
+            float strength = 1f - (away.magnitude / SeparationRadius); // Stronger when closer
+            push += away.normalized * strength;
+        }
+
+        transform.position += push * SeparationForce * Time.deltaTime;
     }
 
     private void CheckDetection()
@@ -77,6 +102,7 @@ public class BatController : MonoBehaviour
         }
         else if (diff.sqrMagnitude >= escapeRadius * escapeRadius)
         {
+            _animator.SetBool("CanAttackPlayer", false);
             playerDetected = false;
         }
     }
@@ -149,7 +175,15 @@ public class BatController : MonoBehaviour
         {
             IsFalling = false;
             _animator.SetBool("isGrounded", true);
+
+            StartCoroutine(DespawnAfterDelay());
         }
+    }
+
+    private IEnumerator DespawnAfterDelay()
+    {
+        yield return new WaitForSeconds(_despawnDelay);
+        Destroy(gameObject);
     }
 
     private void CheckPlayerHealth()
@@ -160,6 +194,7 @@ public class BatController : MonoBehaviour
         {
             IsPlayerDead = true;
             playerDetected = false;
+            _animator.SetBool("CanAttackPlayer", false);
         }
     }
 }
