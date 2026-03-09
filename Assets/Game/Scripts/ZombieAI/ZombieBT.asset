@@ -43,7 +43,7 @@ MonoBehaviour:
     <child>\r\n              <ActionNode id=\"11\" />\r\n            </child>\r\n         
     </GuardAndNode>\r\n        </elem>\r\n      </children>\r\n      <inputParams
     />\r\n      <outputParams />\r\n      <localParams />\r\n    </PrioritySelectorNode>\r\n   
-    <ConditionEvalNode id=\"3\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"Zombie/IsDead\">\r\n     
+    <ConditionEvalNode id=\"3\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"Zombie/IsDead\">\r\n     
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <SequenceNode id=\"2\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode
     id=\"4\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
@@ -66,7 +66,7 @@ MonoBehaviour:
     <children>\r\n        <elem>\r\n          <ActionNode id=\"10\" />\r\n       
     </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
     />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <ConditionEvalNode
-    id=\"12\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"AlwaysTrue\">\r\n     
+    id=\"12\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"AlwaysTrue\">\r\n     
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <ActionNode id=\"11\" action=\"Zombie/Patrol\">\r\n      <inputParams />\r\n     
     <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode
