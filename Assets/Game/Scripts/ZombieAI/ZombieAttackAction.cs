@@ -7,11 +7,13 @@ using BBUnity.Actions;
 [Action("Zombie/Attack")]
 public class ZombieAttackAction : GOAction
 {
-    [InParam("Player")] public GameObject player;
+    // [InParam("Player")] public GameObject player;
     [InParam("Attack Damage")] public float attackDamage = 10f;
     [InParam("Clip Name")] public string clipName = "Attack";
     [InParam("Hit Timing (0 to 1)")] public float hitTiming = 0.5f;
 
+    private GameObject player;
+    private ZombieController controller; // Reference to our main script
     private float attackDuration = 1.0f;
     private float attackStartTime;
     private bool hasDealtDamage;
@@ -22,6 +24,13 @@ public class ZombieAttackAction : GOAction
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         animator = gameObject.GetComponent<Animator>();
+        controller = gameObject.GetComponent<ZombieController>();
+
+        // Get the dynamic player reference from the controller
+        if (controller != null)
+        {
+            player = controller.player;
+        }
         hasDealtDamage = false;
 
         FindAnimationDuration();
@@ -56,9 +65,20 @@ public class ZombieAttackAction : GOAction
         if (!hasDealtDamage && elapsedTime >= (attackDuration * hitTiming))
         {
             PlayerHealth ph = player.GetComponent<PlayerHealth>();
-            if (ph != null) ph.TakeDamage(attackDamage);
+
+            // Safety check: Only deal damage and log health if the target actually has a health script
+            if (ph != null)
+            {
+                ph.TakeDamage(attackDamage);
+                Debug.Log($"Player Health: {ph.health}");
+            }
+            else
+            {
+                // This tells us what the zombie is mistakenly targeting!
+                Debug.LogWarning($"[Zombie] Tried to attack {player.name}, but it has no PlayerHealth script!");
+            }
+
             hasDealtDamage = true;
-            Debug.Log(ph.health);
         }
 
         if (elapsedTime >= attackDuration)

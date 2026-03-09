@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: c4221185c57274a4684e2f91cc28c031, type: 2}
+  m_SubtractiveShadowColor: {r: 0.16234599, g: 0.05968668, b: 0.381132, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 51b74d7bad397457d883c5940f7664d8, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000002, guid: f62d77bf7423ad44e982d33ff328c481, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: f62d77bf7423ad44e982d33ff328c481, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 5b65191730f4ebe4983eb723638ad8a6, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -4424,7 +4424,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.33333334
+  m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: a225e805ab1ea0d49b296477e672821c, type: 2}
   m_BuildHeightMesh: 0
@@ -4456,7 +4456,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.28022364, g: 0.23331428, b: 0.3735848, a: 1}
   m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
@@ -4519,13 +4519,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613152018}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34265065, y: -0.32288626, z: -0.09672724, w: 0.8769144}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalRotation: {x: 0.030726299, y: -0.94324005, z: 0.33045304, w: -0.012448658}
+  m_LocalPosition: {x: -55, y: 138, z: 499}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 32.581, y: -48.652, z: -27.641}
+  m_LocalEulerAnglesHint: {x: 38.508, y: -183.208, z: -4.852}
 --- !u!114 &613152021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5355,7 +5355,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.33333334
+  m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 547d43c74855666469c658da25ab2708, type: 2}
   m_BuildHeightMesh: 0
@@ -10136,7 +10136,7 @@ GameObject:
   - component: {fileID: 1436440322}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10654,7 +10654,7 @@ GameObject:
   - component: {fileID: 1568909952}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11167,7 +11167,7 @@ GameObject:
   - component: {fileID: 1666557524}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
