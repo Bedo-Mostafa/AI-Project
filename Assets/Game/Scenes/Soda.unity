@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 413966890}
   - component: {fileID: 413966884}
   - component: {fileID: 413966889}
+  - component: {fileID: 413966891}
   m_Layer: 6
   m_Name: Screamer
   m_TagString: Untagged
@@ -302,8 +303,10 @@ MonoBehaviour:
     colorParams: []
     colorParamsNames: []
     colorParamsLostDefaultValue: 
-    objectParams: []
-    objectParamsNames: []
+    objectParams:
+    - {fileID: 2029841696}
+    objectParamsNames:
+    - Player
     objectParamsLostDefaultValue: 
     layerMaskParams:
     - serializedVersion: 2
@@ -359,6 +362,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &413966891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413966883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf65afe1f34d4040a7f83f7fb7b72d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieBase
+  alertDuration: 5
 --- !u!1 &714604748
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +621,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -638,9 +654,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 0d58a07a29112284fbbb0df52151675e, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ae769ed8021eca74e8e8e95ef3c2b35c, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1350778977
 GameObject:
@@ -889,7 +905,7 @@ Transform:
   m_GameObject: {fileID: 2029841696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.24, y: 0.5, z: 58.99}
+  m_LocalPosition: {x: -93.1, y: 1, z: 84.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
