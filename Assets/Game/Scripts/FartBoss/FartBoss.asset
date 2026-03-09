@@ -142,73 +142,73 @@ MonoBehaviour:
     />\r\n          <ConditionNode id=\"23\" />\r\n          <SequenceNode id=\"24\"
     />\r\n          <RepeatDecorator id=\"30\" />\r\n        </nodes>\r\n      </_nodes>\r\n   
     </BehaviorTree>\r\n    <RepeatDecorator id=\"30\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"486.4 267.2\" name=\"Repeat\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"728.2428 -393.7428\" name=\"Repeat\"
     description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"30\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <ParallelNode id=\"19\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"True\" position=\"451.1548
-    537.8384\" name=\"Parallel\" description=\"Executes all its children in parallel
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"692.9976
+    -123.1045\" name=\"Parallel\" description=\"Executes all its children in parallel
     until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"30\" />\r\n         
     <RepeatDecorator id=\"30\" />\r\n        </data>\r\n      </_data>\r\n    </ParallelNode>\r\n   
     <PrioritySelectorNode id=\"2\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"222.5386 814.1379\" name=\"Priority Selector\"
-    description=\"\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
-    id=\"0\" />\r\n          <RepeatDecorator id=\"27\" />\r\n          <ParallelNode
-    id=\"19\" />\r\n        </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n   
-    <SequenceNode id=\"24\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"604.7542 1021.039\" name=\"Sequence\" description=\"Executes all its
+    selected=\"True\" position=\"464.3813 153.1947\" name=\"Priority Selector\" description=\"\"
+    cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <RepeatDecorator id=\"27\" />\r\n          <ParallelNode id=\"19\" />\r\n       
+    </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n    <SequenceNode
+    id=\"24\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"846.5969 360.0956\" name=\"Sequence\" description=\"Executes all its
     children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"24\" />\r\n         
     <ParallelNode id=\"19\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
     <ActionNode id=\"20\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"876.7557 1040.239\" name=\"FartBoss/Summon\" description=\"\" cardinality=\"0\"
+    position=\"1118.597 379.2956\" name=\"FartBoss/Summon\" description=\"\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"20\" />\r\n          <ParallelNode id=\"19\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"16\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"134.7237 1628.438\" name=\"Zombie/IsDead\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"376.5664 967.4951\" name=\"Zombie/IsDead\"
     description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <PrioritySelectorNode id=\"2\" />\r\n          <PrioritySelectorNode
     id=\"2\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
     <SequenceNode id=\"15\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"0.1385117 979.9399\" name=\"Sequence\" description=\"Executes all
-    its children in sequence until all of them are successful\" cardinality=\"-1\"
-    hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SequenceNode
-    id=\"15\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
-    <ConditionEvalNode id=\"13\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"203.5428 1038.85\" name=\"Zombie/PlayerInRange\"
-    description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
-    id=\"0\" />\r\n          <PrioritySelectorNode id=\"2\" />\r\n          <PrioritySelectorNode
-    id=\"2\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
-    <SequenceNode id=\"8\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"190.2926 943.0992\" name=\"Sequence\" description=\"Executes all its
+    position=\"241.9813 318.9965\" name=\"Sequence\" description=\"Executes all its
     children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"15\" />\r\n       
+    </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <ConditionEvalNode id=\"13\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"445.3855
+    377.9066\" name=\"Zombie/PlayerInRange\" description=\"Eval\" cardinality=\"1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode
+    id=\"2\" />\r\n          <PrioritySelectorNode id=\"2\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ConditionEvalNode>\r\n    <SequenceNode id=\"8\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"432.1353
+    282.1558\" name=\"Sequence\" description=\"Executes all its children in sequence
+    until all of them are successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"8\" />\r\n        </data>\r\n     
     </_data>\r\n    </SequenceNode>\r\n    <ConditionEvalNode id=\"7\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"454.2886
-    1054.889\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"696.1313
+    393.9457\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode id=\"2\" />\r\n         
     <PrioritySelectorNode id=\"2\" />\r\n        </data>\r\n      </_data>\r\n   
     </ConditionEvalNode>\r\n    <ActionNode id=\"5\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"397.539 950.1393\" name=\"Zombie/Chase\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"639.3817 289.1958\" name=\"Zombie/Chase\"
     description=\"\" cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"5\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ConditionNode id=\"23\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"511.953 1173.038\" name=\"Perception/IsTargetClose\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"753.7958 512.0947\" name=\"Perception/IsTargetClose\"
     description=\"Checks whether a target is close depending on a given distance\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionNode id=\"23\" />\r\n          <SequenceNode id=\"24\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionNode>\r\n    <ActionNode id=\"21\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"707.1543
-    1179.438\" name=\"FartBoss/Fart\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"948.9971
+    518.4946\" name=\"FartBoss/Fart\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"21\" />\r\n         
     <SequenceNode id=\"24\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ActionNode id=\"17\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"15.95282 1171.439\" name=\"Zombie/Die\" description=\"\" cardinality=\"0\"
+    position=\"257.7956 510.4956\" name=\"Zombie/Die\" description=\"\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"17\" />\r\n          <SequenceNode id=\"15\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"14\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"228.5386 1133.139\" name=\"Zombie/Attack\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"470.3813 472.1958\" name=\"Zombie/Attack\"
     description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"14\" />\r\n          <SequenceNode
     id=\"8\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
@@ -230,6 +230,6 @@ MonoBehaviour:
     <BehaviorTree id=\"29\" _removeIfClosed=\"False\">\r\n      <_rootList />\r\n     
     <_nodes>\r\n        <nodes />\r\n      </_nodes>\r\n    </BehaviorTree>\r\n 
     </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.5
+  zoom: 0.7
   subslist: []
   _guid: 69e809f15eb73f149becbc916011a1a1
