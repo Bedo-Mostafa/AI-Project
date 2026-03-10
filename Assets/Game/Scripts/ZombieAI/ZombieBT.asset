@@ -42,7 +42,7 @@ MonoBehaviour:
     <child>\r\n              <ActionNode id=\"11\" />\r\n            </child>\r\n         
     </GuardAndNode>\r\n        </elem>\r\n      </children>\r\n      <inputParams
     />\r\n      <outputParams />\r\n      <localParams />\r\n    </PrioritySelectorNode>\r\n   
-    <ConditionEvalNode id=\"3\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"Zombie/IsDead\">\r\n     
+    <ConditionEvalNode id=\"3\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"Zombie/IsDead\">\r\n     
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <SequenceNode id=\"2\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode
     id=\"4\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
@@ -56,7 +56,7 @@ MonoBehaviour:
     <children>\r\n        <elem>\r\n          <ActionNode id=\"9\" />\r\n       
     </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
     />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <ConditionEvalNode
-    id=\"8\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"Zombie/PlayerInRange\">\r\n     
+    id=\"8\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"Zombie/PlayerInRange\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"Player\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"True\" blackboard=\"Player\" />\r\n          <entry name=\"Range
     Threshold\" type=\"System.Single\" isBlackboard=\"True\" blackboard=\"ChaseDist\"

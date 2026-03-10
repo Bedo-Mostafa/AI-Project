@@ -3817,7 +3817,6 @@ GameObject:
   - component: {fileID: 1071813262}
   - component: {fileID: 1071813263}
   - component: {fileID: 1071813264}
-  - component: {fileID: 1071813265}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -3879,18 +3878,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResolutionController
   resolutionDropdown: {fileID: 1206873769}
   useExclusiveFullScreenWhenMatchingMonitor: 1
---- !u!114 &1071813265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071813261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98932b4bdd4f2b64d953775a1f060ded, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CloseRenderFeaature
 --- !u!1 &1075429904
 GameObject:
   m_ObjectHideFlags: 0
@@ -7890,7 +7877,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0

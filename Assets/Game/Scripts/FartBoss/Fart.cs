@@ -44,9 +44,37 @@ public class Fart : GOAction
         startTime = Time.time;
     }
 
+    // public override TaskStatus OnUpdate()
+    // {
+    //     if (player == null) return TaskStatus.FAILED;
+
+    //     float elapsed = Time.time - startTime;
+
+    //     if (elapsed < duration)
+    //     {
+    //         float frameDamage = damagePerSecond * Time.deltaTime;
+    //         PlayerHealth ph = player.GetComponent<PlayerHealth>();
+    //         if (ph != null)
+    //             ph.TakeDamage(frameDamage);
+
+    //         return TaskStatus.RUNNING;
+    //     }
+
+    //     Finish();
+    //     return TaskStatus.COMPLETED;
+    // }
+
     public override TaskStatus OnUpdate()
     {
         if (player == null) return TaskStatus.FAILED;
+
+        // ---> NEW: Check if the boss just died. If so, stop the fart attack! <---
+        FartBossController boss = gameObject.GetComponent<FartBossController>();
+        if (boss != null && boss.isDead)
+        {
+            Finish();
+            return TaskStatus.COMPLETED;
+        }
 
         float elapsed = Time.time - startTime;
 

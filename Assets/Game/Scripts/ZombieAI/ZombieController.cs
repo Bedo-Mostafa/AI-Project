@@ -10,8 +10,6 @@ public class ZombieController : MonoBehaviour, IShootableObject
     public float health = 100f;
     public bool isDead = false;
 
-    [Header("Movement")]
-    // public Transform[] waypoints;
     [Header("Dynamic References")]
     public Transform[] waypoints;
     public GameObject player; // Now stored here for the Action to reference
@@ -86,9 +84,9 @@ public class ZombieController : MonoBehaviour, IShootableObject
 
     private void Die()
     {
-        //     // Optional: Remove the collider so bullets pass through the corpse
-        //     if (TryGetComponent<Rigidbody>(out Rigidbody rig)) rig.useGravity = false;
-        //     if (TryGetComponent<Collider>(out Collider col)) col.enabled = false;
+        // Optional: Remove the collider so bullets pass through the corpse
+        if (TryGetComponent<Rigidbody>(out Rigidbody rig)) rig.useGravity = false;
+        if (TryGetComponent<Collider>(out Collider col)) col.enabled = false;
         isDead = true;
         Debug.Log("Zombie Died!");
 
@@ -97,6 +95,9 @@ public class ZombieController : MonoBehaviour, IShootableObject
         // IMPORTANT: Change layer so bullets ignore the corpse
         // This prevents the bullet from hitting a "dead" object and trying to parent to it
         gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+        // ---> ADD THIS NEW LINE <---
+        // Tell the GameManager that a zombie has died
+        if (GameManager.Instance != null) GameManager.Instance.ZombieDied();
     }
     #endregion
 }

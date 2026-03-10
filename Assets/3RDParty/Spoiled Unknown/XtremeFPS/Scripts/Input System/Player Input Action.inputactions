@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "Player Input Action",
     "maps": [
         {
@@ -81,7 +82,7 @@
                     "name": "ZoomHold",
                     "type": "Button",
                     "id": "69606d3f-e6bd-4c58-a85c-8b048354334b",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -91,6 +92,15 @@
                     "type": "Button",
                     "id": "87ef1cec-78a9-4f8d-8c2e-684642fe908a",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "8a9a08cc-eef2-4376-9750-2c06de84fdc2",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -435,6 +445,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cb31248c-ebb6-4f39-bcfd-ea46938fc5d2",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

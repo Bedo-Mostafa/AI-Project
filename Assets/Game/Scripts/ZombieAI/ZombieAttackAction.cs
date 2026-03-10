@@ -7,7 +7,6 @@ using BBUnity.Actions;
 [Action("Zombie/Attack")]
 public class ZombieAttackAction : GOAction
 {
-    // [InParam("Player")] public GameObject player;
     [InParam("Attack Damage")] public float attackDamage = 10f;
     [InParam("Clip Name")] public string clipName = "Attack";
     [InParam("Hit Timing (0 to 1)")] public float hitTiming = 0.5f;
