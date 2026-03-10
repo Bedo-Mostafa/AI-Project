@@ -7,6 +7,7 @@ using XtremeFPS.Interfaces;
 /// Shared by all Behavior Bricks actions and conditions.
 /// </summary>
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(AudioSource))]
 public class BatController : MonoBehaviour, IShootableObject
 {
     private const string TakeDamageTrigger = "TakeDamage";
@@ -20,7 +21,7 @@ public class BatController : MonoBehaviour, IShootableObject
     [SerializeField] private float _despawnDelay = 10f;
 
     [Header("AI Parameters")]
-    public Transform PlayerTarget;     // Assign the Player in the Inspector
+    public Transform PlayerTarget;
     public float DetectionRadius = 12f;
     public float escapeRadius = 20f;
     public BoxCollider WanderBounds;
@@ -29,8 +30,15 @@ public class BatController : MonoBehaviour, IShootableObject
     public float MoveSpeed = 4f;
     public float DiveSpeed = 6f;
     public float HeightThreshold = 1f;
-    public float SeparationRadius = 3f;   // Min distance between bats
-    public float SeparationForce = 5f;   // How strongly they push apart
+    public float SeparationRadius = 3f;
+    public float SeparationForce = 5f;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip BatAttack;
+    [SerializeField] private AudioClip BatDamaged;
+    [SerializeField] private AudioClip BatDetect;
+    [SerializeField] private AudioClip BatDie;
+    [SerializeField] private AudioClip BatInterval;
 
     public bool IsAtPlayerHeight = false;
     public bool playerDetected = false;
@@ -41,12 +49,18 @@ public class BatController : MonoBehaviour, IShootableObject
     public bool IsPlayerDead { get; set; }
 
     public Animator _animator;
+    private AudioSource _audioSource;
+
     private Vector3 _groundTarget;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
+
         CurrentHealth = _maxHealth;
+
+        StartCoroutine(IntervalSoundLoop());
     }
 
     private void Update()
@@ -55,13 +69,10 @@ public class BatController : MonoBehaviour, IShootableObject
             FallToGround();
 
         if (IsAtPlayerHeight)
-        {
             _animator.SetBool("CanAttackPlayer", true);
-        }
         else
-        {
             _animator.SetBool("CanAttackPlayer", false);
-        }
+
         if (CurrentHealth <= 0)
             Die();
 
@@ -83,7 +94,7 @@ public class BatController : MonoBehaviour, IShootableObject
             if (!col.TryGetComponent<BatController>(out _)) continue;
 
             Vector3 away = transform.position - col.transform.position;
-            float strength = 1f - (away.magnitude / SeparationRadius); // Stronger when closer
+            float strength = 1f - (away.magnitude / SeparationRadius);
             push += away.normalized * strength;
         }
 
@@ -95,11 +106,12 @@ public class BatController : MonoBehaviour, IShootableObject
         if (PlayerTarget == null || !IsAlive) return;
 
         Vector3 diff = transform.position - PlayerTarget.position;
-        diff.y = 0f; // Ignore height for detection
+        diff.y = 0f;
 
-        if (diff.sqrMagnitude <= DetectionRadius * DetectionRadius)
+        if (!playerDetected && diff.sqrMagnitude <= DetectionRadius * DetectionRadius)
         {
             playerDetected = true;
+            PlaySound(BatDetect);
         }
         else if (diff.sqrMagnitude >= escapeRadius * escapeRadius)
         {
@@ -120,6 +132,9 @@ public class BatController : MonoBehaviour, IShootableObject
         if (!IsAlive) return;
 
         CurrentHealth -= (int)amount;
+
+        PlaySound(BatDamaged);
+
         _animator.SetTrigger(TakeDamageTrigger);
 
         if (CurrentHealth <= 0)
@@ -134,6 +149,7 @@ public class BatController : MonoBehaviour, IShootableObject
     public void TriggerAttack()
     {
         _animator.SetTrigger(AttackTrigger);
+        PlaySound(BatAttack);
     }
 
     public void Die()
@@ -143,12 +159,14 @@ public class BatController : MonoBehaviour, IShootableObject
         IsAlive = false;
         IsFalling = true;
 
+        PlaySound(BatDie);
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.BatDied();
+
         _groundTarget = FindGroundPoint();
 
-        // Calculate height from ground
         float heightFromGround = transform.position.y - _groundTarget.y;
-
-        // Send to animator
         _animator.SetFloat("FallHeight", heightFromGround);
 
         _animator.SetTrigger(FallTrigger);
@@ -169,15 +187,18 @@ public class BatController : MonoBehaviour, IShootableObject
     private void FallToGround()
     {
         transform.position = Vector3.MoveTowards(
-            transform.position, _groundTarget, _fallSpeed * Time.deltaTime);
+            transform.position,
+            _groundTarget,
+            _fallSpeed * Time.deltaTime);
 
-        // Gradually zero out X position offset and all rotation while falling
         Vector3 pos = transform.position;
         pos.x = Mathf.Lerp(pos.x, _groundTarget.x, _fallSpeed * Time.deltaTime);
         transform.position = pos;
 
         transform.rotation = Quaternion.Lerp(
-            transform.rotation, Quaternion.identity, _fallSpeed * Time.deltaTime);
+            transform.rotation,
+            Quaternion.identity,
+            _fallSpeed * Time.deltaTime);
 
         if (transform.position == _groundTarget)
         {
@@ -204,5 +225,32 @@ public class BatController : MonoBehaviour, IShootableObject
             playerDetected = false;
             _animator.SetBool("CanAttackPlayer", false);
         }
+    }
+
+    private IEnumerator IntervalSoundLoop()
+    {
+        while (true)
+        {
+            if (!playerDetected && IsAlive)
+            {
+                float wait = Random.Range(5f, 7f);
+                yield return new WaitForSeconds(wait);
+
+                if (!playerDetected && IsAlive)
+                    PlaySound(BatInterval);
+            }
+            else
+            {
+                yield return new WaitForSeconds(1f);
+            }
+        }
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip == null || _audioSource == null) return;
+
+        _audioSource.pitch = Random.Range(0.9f, 1.1f);
+        _audioSource.PlayOneShot(clip);
     }
 }

@@ -767,8 +767,8 @@ MonoBehaviour:
     m_Bits: 512
   _despawnDelay: 10
   PlayerTarget: {fileID: 0}
-  DetectionRadius: 10
-  escapeRadius: 20
+  DetectionRadius: 30
+  escapeRadius: 40
   WanderBounds: {fileID: 0}
   HoverDistance: 4
   AttackCooldown: 4
@@ -777,6 +777,11 @@ MonoBehaviour:
   HeightThreshold: 4
   SeparationRadius: 3
   SeparationForce: 5
+  BatAttack: {fileID: 8300000, guid: 5f6f86af4b69b78419ffb14c802b0db2, type: 3}
+  BatDamaged: {fileID: 8300000, guid: d3aa732e91190fb478b99c2898509f72, type: 3}
+  BatDetect: {fileID: 8300000, guid: bd540861de0e52b41b3e5d3281f03909, type: 3}
+  BatDie: {fileID: 8300000, guid: 54f45cc77bcbb3c48b7da93c8f850233, type: 3}
+  BatInterval: {fileID: 8300000, guid: 52eea15ef16423648b39647d940f3164, type: 3}
   IsAtPlayerHeight: 0
   playerDetected: 0
   CurrentHealth: 100

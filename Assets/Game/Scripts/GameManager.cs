@@ -114,12 +114,14 @@ public class GameManager : MonoBehaviour
 
     [Header("UI References")]
     public TextMeshProUGUI timerText;
-    public TextMeshProUGUI zombiesRemainingText; // NEW: Reference for the counter
+    public TextMeshProUGUI zombiesRemainingText;
+    public TextMeshProUGUI batsRemainingText; // NEW
     public GameObject winPanel;
     public GameObject losePanel;
 
     private float currentTime;
     private int totalZombies;
+    private int totalBats;
     private bool gameEnded = false;
 
     private void Awake()
@@ -133,10 +135,12 @@ public class GameManager : MonoBehaviour
         currentTime = timeLimit;
 
         // Count all zombies in the scene at the start
-        totalZombies = 5;//GameObject.FindGameObjectsWithTag("Zombie").Length;
+        totalZombies = 5; //GameObject.FindGameObjectsWithTag("Zombie").Length;
+        totalBats = 5;
 
         // NEW: Update the UI text right when the game starts
         UpdateZombieCounterUI();
+        UpdateBatsCounterUI();
 
         if (winPanel != null) winPanel.SetActive(false);
         if (losePanel != null) losePanel.SetActive(false);
@@ -170,14 +174,23 @@ public class GameManager : MonoBehaviour
         if (gameEnded) return;
 
         totalZombies--;
-
-        // NEW: Update the text every time a zombie dies
         UpdateZombieCounterUI();
+        CheckWinCondition();
+    }
 
-        if (totalZombies <= 0)
-        {
+    public void BatDied()
+    {
+        if (gameEnded) return;
+
+        totalBats--;
+        UpdateBatsCounterUI();
+        CheckWinCondition();
+    }
+
+    private void CheckWinCondition()
+    {
+        if (totalZombies <= 0 && totalBats <= 0)
             WinGame();
-        }
     }
 
     // NEW: Method to handle the text formatting
@@ -187,6 +200,15 @@ public class GameManager : MonoBehaviour
         {
             // Ensures the counter never visually drops below 0
             zombiesRemainingText.text = "Zombies Left: " + Mathf.Max(totalZombies, 0);
+        }
+    }
+
+    private void UpdateBatsCounterUI()
+    {
+        if (batsRemainingText != null)
+        {
+            // Ensures the counter never visually drops below 0
+            batsRemainingText.text = "Bats Left: " + Mathf.Max(totalBats, 0);
         }
     }
 

@@ -8,6 +8,7 @@ public class BatSpawner : MonoBehaviour
     [SerializeField] private GameObject batPrefab;
     [SerializeField] private int batsPerSpawn = 2;
     [SerializeField] private float spawnInterval = 60f;
+    [SerializeField] private int maxBats = 10;
 
     private BoxCollider spawnBox;
     private Transform player;
@@ -33,7 +34,7 @@ public class BatSpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
-            if (activeBats.Count < 10)
+            if (activeBats.Count < maxBats)
                 SpawnBats();
         }
     }
@@ -54,6 +55,10 @@ public class BatSpawner : MonoBehaviour
                 bat.WanderBounds = spawnBox;
 
                 activeBats.Add(bat);
+                if (activeBats.Count >= maxBats)
+                {
+                    break;
+                }
             }
         }
     }
