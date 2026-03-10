@@ -3364,7 +3364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3714,6 +3714,7 @@ GameObject:
   - component: {fileID: 428464172}
   - component: {fileID: 428464171}
   - component: {fileID: 428464170}
+  - component: {fileID: 428464173}
   m_Layer: 5
   m_Name: TryAgain
   m_TagString: Untagged
@@ -3810,7 +3811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.691519, g: 0.9716981, b: 0.41709682, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3835,6 +3836,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428464168}
   m_CullTransparentMesh: 1
+--- !u!114 &428464173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428464168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3919319f4dc2d4748ad9e81ea76d45ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverTween
+  hoverScale: 1.1
+  duration: 0.2
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!114 &440047434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4487,6 +4505,7 @@ GameObject:
   - component: {fileID: 488147645}
   - component: {fileID: 488147644}
   - component: {fileID: 488147643}
+  - component: {fileID: 488147646}
   m_Layer: 5
   m_Name: TryAgain
   m_TagString: Untagged
@@ -4583,7 +4602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8372072, g: 0.9528302, b: 0.18427375, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4608,6 +4627,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488147641}
   m_CullTransparentMesh: 1
+--- !u!114 &488147646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488147641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3919319f4dc2d4748ad9e81ea76d45ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverTween
+  hoverScale: 1.1
+  duration: 0.2
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!114 &506789684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4773,7 +4809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5987,6 +6023,7 @@ GameObject:
   - component: {fileID: 842806638}
   - component: {fileID: 842806637}
   - component: {fileID: 842806636}
+  - component: {fileID: 842806639}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -6083,7 +6120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6415094, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6108,6 +6145,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842806634}
   m_CullTransparentMesh: 1
+--- !u!114 &842806639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842806634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3919319f4dc2d4748ad9e81ea76d45ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverTween
+  hoverScale: 1.1
+  duration: 0.2
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!114 &860787565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9153,6 +9207,7 @@ GameObject:
   - component: {fileID: 1263661207}
   - component: {fileID: 1263661206}
   - component: {fileID: 1263661205}
+  - component: {fileID: 1263661208}
   m_Layer: 5
   m_Name: Resume btn
   m_TagString: Untagged
@@ -9262,6 +9317,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263661203}
   m_CullTransparentMesh: 1
+--- !u!114 &1263661208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263661203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3919319f4dc2d4748ad9e81ea76d45ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverTween
+  hoverScale: 1.1
+  duration: 0.2
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!1001 &1263786079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9708,6 +9780,7 @@ GameObject:
   - component: {fileID: 1341861993}
   - component: {fileID: 1341861992}
   - component: {fileID: 1341861991}
+  - component: {fileID: 1341861994}
   m_Layer: 5
   m_Name: Retry btn
   m_TagString: Untagged
@@ -9817,6 +9890,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341861989}
   m_CullTransparentMesh: 1
+--- !u!114 &1341861994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341861989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3919319f4dc2d4748ad9e81ea76d45ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverTween
+  hoverScale: 1.1
+  duration: 0.2
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!1001 &1354942559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10047,6 +10137,7 @@ GameObject:
   - component: {fileID: 1393361726}
   - component: {fileID: 1393361725}
   - component: {fileID: 1393361724}
+  - component: {fileID: 1393361727}
   m_Layer: 5
   m_Name: Main Menu btn
   m_TagString: Untagged
@@ -10156,6 +10247,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393361722}
   m_CullTransparentMesh: 1
+--- !u!114 &1393361727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393361722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3919319f4dc2d4748ad9e81ea76d45ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverTween
+  hoverScale: 1.1
+  duration: 0.2
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!1001 &1421284198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10623,8 +10731,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10955,6 +11063,7 @@ GameObject:
   - component: {fileID: 1586628758}
   - component: {fileID: 1586628757}
   - component: {fileID: 1586628756}
+  - component: {fileID: 1586628759}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -11051,7 +11160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8396226, g: 0.2732734, b: 0.2732734, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11076,6 +11185,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586628754}
   m_CullTransparentMesh: 1
+--- !u!114 &1586628759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586628754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3919319f4dc2d4748ad9e81ea76d45ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverTween
+  hoverScale: 1.1
+  duration: 0.2
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!1001 &1626494991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13885,7 +14011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
