@@ -212,7 +212,7 @@ public class BatController : MonoBehaviour, IShootableObject
     private IEnumerator DespawnAfterDelay()
     {
         yield return new WaitForSeconds(_despawnDelay);
-        Destroy(gameObject);
+        this.gameObject.SetActive(false);
     }
 
     private void CheckPlayerHealth()
