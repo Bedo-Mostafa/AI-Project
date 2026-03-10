@@ -7,18 +7,21 @@ using BBUnity.Actions;
 [Action("Screamer/Flee")]
 public class FleeAction : GOAction
 {
-    [InParam("Player")] public GameObject player;
     [InParam("Flee Distance")] public float fleeDistance = 15f;
     [InParam("Safe Distance")] public float safeDistance = 20f;
 
     private NavMeshAgent agent;
     private Animator animator;
     private Vector3 fleeTarget;
+    private ZombieController controller;
+    private GameObject player;
 
     public override void OnStart()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         animator = gameObject.GetComponent<Animator>();
+        controller = gameObject.GetComponent<ZombieController>();
+        player = controller?.player;
 
         PickFleeTarget();
     }

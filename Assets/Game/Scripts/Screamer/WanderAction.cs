@@ -19,14 +19,14 @@ public class WanderAction : GOAction
         animator = gameObject.GetComponent<Animator>();
 
         PickNewWanderTarget();
+        agent.SetDestination(wanderTarget);
+        animator?.SetBool("IsMoving", true);
     }
 
     public override TaskStatus OnUpdate()
     {
         if (agent == null) return TaskStatus.FAILED;
 
-        agent.SetDestination(wanderTarget);
-        animator?.SetBool("IsMoving", true);
 
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
