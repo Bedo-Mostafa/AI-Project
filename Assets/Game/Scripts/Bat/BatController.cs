@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using XtremeFPS.Interfaces;
 
 /// <summary>
 /// Central state hub for the bat enemy AI.
 /// Shared by all Behavior Bricks actions and conditions.
 /// </summary>
 [RequireComponent(typeof(Animator))]
-public class BatController : MonoBehaviour
+public class BatController : MonoBehaviour, IShootableObject
 {
     private const string TakeDamageTrigger = "TakeDamage";
     private const string AttackTrigger = "Attack";
@@ -107,11 +108,18 @@ public class BatController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int amount)
+    public void OnHit(RaycastHit hit, float damage)
     {
         if (!IsAlive) return;
 
-        CurrentHealth -= amount;
+        TakeDamage(damage);
+    }
+
+    public void TakeDamage(float amount)
+    {
+        if (!IsAlive) return;
+
+        CurrentHealth -= (int)amount;
         _animator.SetTrigger(TakeDamageTrigger);
 
         if (CurrentHealth <= 0)

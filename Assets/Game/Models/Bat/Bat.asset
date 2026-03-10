@@ -38,7 +38,7 @@ MonoBehaviour:
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <ActionNode id=\"63\" action=\"Bat/FallToDeath\">\r\n      <inputParams />\r\n     
     <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode
-    id=\"75\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"Bat/IsPlayerDetected\">\r\n     
+    id=\"75\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"Bat/IsPlayerDetected\">\r\n     
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <SequenceNode id=\"74\">\r\n      <children>\r\n        <elem>\r\n          <SequenceNode
     id=\"49\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
