@@ -203,7 +203,7 @@ MonoBehaviour:
     537.9238\" name=\"Screamer/Flee\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"5\" />\r\n          <SequenceNode
     id=\"55\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"11\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    <ActionNode id=\"11\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
     position=\"927.597 541.5839\" name=\"Screamer/Scream\" description=\"\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"11\" />\r\n          <SequenceNode id=\"55\" />\r\n        </data>\r\n     
@@ -217,7 +217,7 @@ MonoBehaviour:
     description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ConditionNode id=\"38\" />\r\n          <NotDecorator
     id=\"37\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n   
-    <ActionNode id=\"24\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    <ActionNode id=\"24\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
     position=\"155.69 799.5615\" name=\"Zombie/Die\" description=\"\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"24\" />\r\n          <SequenceNode id=\"26\" />\r\n        </data>\r\n     

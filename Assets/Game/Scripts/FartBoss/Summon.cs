@@ -43,6 +43,7 @@ public class Summon : GOAction
             Transform point = available[i];
             GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
             GameObject.Instantiate(prefab, point.position, point.rotation);
+            GameManager.Instance?.ZombieSpawned();
         }
     }
 

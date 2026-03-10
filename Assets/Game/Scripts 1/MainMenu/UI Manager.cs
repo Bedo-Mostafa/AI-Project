@@ -50,7 +50,11 @@ public class UIManager : MonoBehaviour
     }
     public void closeGame()
     {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
     }
 
    

@@ -56,13 +56,13 @@ public class ScreamerController : MonoBehaviour, IShootableObject
 
         isDead = true;
 
-        if (agent != null) agent.enabled = false;
+        // if (agent != null) agent.enabled = false;
 
         gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
 
         if (GameManager.Instance != null) GameManager.Instance.ZombieDied();
 
-        Destroy(gameObject, 5f);
+        StartCoroutine(HideCorpseRoutine());
     }
 
     public void Scream()
@@ -72,6 +72,12 @@ public class ScreamerController : MonoBehaviour, IShootableObject
 
         if (screamClip != null)
             StartCoroutine(DelayedScreamSound());
+    }
+
+    private IEnumerator HideCorpseRoutine()
+    {
+        yield return new WaitForSeconds(5f);
+        gameObject.SetActive(false);
     }
 
     private IEnumerator RotateTowardsPlayer()

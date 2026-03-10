@@ -32,7 +32,6 @@ public class FartBossController : MonoBehaviour, IShootableObject, IEnemyControl
     {
         if (isDead) return;
 
-        Debug.Log($"Fart Boss hit at {hit.point} for {damage} damage!");
         TakeDamage(damage);
     }
 
@@ -53,10 +52,9 @@ public class FartBossController : MonoBehaviour, IShootableObject, IEnemyControl
         if (TryGetComponent<Collider>(out Collider col)) col.enabled = false;
 
         isDead = true;
-        Debug.Log("Zombie Died!");
 
         // Disable AI navigation so it stops moving
-        if (agent != null) agent.enabled = false;
+        // if (agent != null) agent.enabled = false;
 
         // Change layer so bullets ignore the corpse
         gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
