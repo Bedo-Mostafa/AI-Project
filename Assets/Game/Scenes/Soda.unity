@@ -275,7 +275,7 @@ MonoBehaviour:
   maxTasksPerTick: 500
   behavior: {fileID: 11400000, guid: 25a16a618cdeb24448547c456e316c10, type: 2}
   paused: 0
-  restartWhenFinished: 0
+  restartWhenFinished: 1
   blackboard:
     intParams: 
     intParamsNames: []

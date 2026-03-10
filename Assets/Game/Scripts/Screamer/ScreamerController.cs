@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using XtremeFPS.Interfaces;
 
+[DefaultExecutionOrder(-10)]
 public class ScreamerController : MonoBehaviour, IShootableObject
 {
     [Header("Stats")]

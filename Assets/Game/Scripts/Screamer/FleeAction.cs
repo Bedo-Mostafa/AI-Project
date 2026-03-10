@@ -21,7 +21,7 @@ public class FleeAction : GOAction
         agent = gameObject.GetComponent<NavMeshAgent>();
         animator = gameObject.GetComponent<Animator>();
         controller = gameObject.GetComponent<ZombieController>();
-        player = controller?.player;
+        player = controller.player;
 
         PickFleeTarget();
     }
