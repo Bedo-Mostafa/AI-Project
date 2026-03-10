@@ -17,21 +17,6 @@ public class ZombieDieAction : GOAction
         animator = gameObject.GetComponent<Animator>();
     }
 
-    // public override TaskStatus OnUpdate()
-    // {
-    //     if (!isDead)
-    //     {
-    //         isDead = true;
-    //         if (agent != null && agent.isActiveAndEnabled)
-    //         {
-    //             agent.ResetPath();
-    //             agent.isStopped = true;
-    //         }
-    //         animator.SetBool("IsDead", true);
-    //         GameObject.Destroy(gameObject, 5f);
-    //     }
-    //     return TaskStatus.COMPLETED;
-    // }
     public override TaskStatus OnUpdate()
     {
         if (!isDead)
@@ -43,9 +28,6 @@ public class ZombieDieAction : GOAction
                 agent.isStopped = true;
             }
             animator.SetBool("IsDead", true);
-
-            // REMOVE OR COMMENT OUT THIS LINE:
-            // GameObject.Destroy(gameObject, 5f); 
         }
         return TaskStatus.RUNNING;
     }

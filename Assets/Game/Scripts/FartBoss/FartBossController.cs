@@ -50,28 +50,9 @@ public class FartBossController : MonoBehaviour, IShootableObject
         }
     }
 
-    // private void Die()
-    // {
-    //     // Optional: Remove the collider so bullets pass through the corpse
-    //     if (TryGetComponent<Rigidbody>(out Rigidbody rig)) rig.useGravity = false;
-    //     if (TryGetComponent<Collider>(out Collider col)) col.enabled = false;
-
-    //     isDead = true;
-    //     Debug.Log("Fart Boss Died!");
-
-    //     // Disable AI navigation so it stops moving
-    //     if (agent != null) agent.enabled = false;
-
-    //     // IMPORTANT: Change layer so bullets ignore the corpse
-    //     gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-
-    //     // Tell the GameManager that a zombie has died (this lowers the zombie count!)
-    //     if (GameManager.Instance != null) GameManager.Instance.ZombieDied();
-    // }
-
     private void Die()
     {
-        // Optional: Remove the collider so bullets pass through the corpse
+        // Remove the collider so bullets pass through the corpse
         if (TryGetComponent<Rigidbody>(out Rigidbody rig)) rig.useGravity = false;
         if (TryGetComponent<Collider>(out Collider col)) col.enabled = false;
 
@@ -81,25 +62,21 @@ public class FartBossController : MonoBehaviour, IShootableObject
         // Disable AI navigation so it stops moving
         if (agent != null) agent.enabled = false;
 
-        // IMPORTANT: Change layer so bullets ignore the corpse
+        // Change layer so bullets ignore the corpse
         gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
 
         // Tell the GameManager that a zombie has died
         if (GameManager.Instance != null) GameManager.Instance.ZombieDied();
 
-        // ---> ADD THIS NEW LINE <---
         // Start the timer to safely hide the body
         StartCoroutine(HideCorpseRoutine());
     }
 
-    // ---> ADD THIS NEW METHOD <---
     private IEnumerator HideCorpseRoutine()
     {
         // Wait for 5 seconds so the death animation can finish and the body rests on the floor
         yield return new WaitForSeconds(5f);
 
-        // Deactivate the zombie instead of destroying it.
-        // This hides the body, but keeps the XtremeFPS pooled blood effects safe in memory!
         gameObject.SetActive(false);
     }
 }
