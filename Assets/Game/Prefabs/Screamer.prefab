@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5539034535159216892
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_Name
+      value: Screamer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 53d4d11947819f44a8ced8073f92b9fa, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8859890471662683134}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8604239745472112429}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5240296155800695308}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5780338405720008387}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 606393784640834812}
+  m_SourcePrefab: {fileID: 100100000, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+--- !u!1 &4620679207209666477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a6781b17fdc9d6498889154d95ae699, type: 3}
+  m_PrefabInstance: {fileID: 5539034535159216892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &8859890471662683134
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620679207209666477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!195 &8604239745472112429
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620679207209666477}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &5240296155800695308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620679207209666477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf65afe1f34d4040a7f83f7fb7b72d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieBase
+  alertDuration: 5
+--- !u!114 &5780338405720008387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620679207209666477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8304422f6594364ab6e7570be54ad64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreamerController
+  health: 100
+  isDead: 0
+  player: {fileID: 0}
+  screamClip: {fileID: 8300000, guid: 3c34b0ceef558754c940fbe9c8ce93f3, type: 3}
+  rotateDuration: 0.5
+  soundDelay: 1
+--- !u!114 &606393784640834812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620679207209666477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422fb6956201c7944ae2113a1a53b0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BehaviorExecutor
+  maxTasksPerTick: 500
+  behavior: {fileID: 11400000, guid: 25a16a618cdeb24448547c456e316c10, type: 2}
+  paused: 0
+  restartWhenFinished: 1
+  blackboard:
+    intParams: 
+    intParamsNames: []
+    intParamsLostDefaultValue: 
+    boolParams: 
+    boolParamsNames: []
+    boolParamsLostDefaultValue: 
+    floatParams:
+    - 10
+    - 2
+    - 10
+    - 20
+    - 30
+    - 5
+    floatParamsNames:
+    - Wander Radius
+    - Wait Time
+    - Flee Distance
+    - Safe Distance
+    - Scream Radius
+    - Scream Wait Time
+    floatParamsLostDefaultValue: 
+    stringParams: []
+    stringParamsNames: []
+    stringParamsLostDefaultValue: 
+    colorParams: []
+    colorParamsNames: []
+    colorParamsLostDefaultValue: 
+    objectParams: []
+    objectParamsNames: []
+    objectParamsLostDefaultValue: 
+    layerMaskParams:
+    - serializedVersion: 2
+      m_Bits: 64
+    layerMaskParamsNames:
+    - Zombie Layer
+    layerMaskParamsLostDefaultValue: 
+    enumParamsNames: []
+    enumParamsLostDefaultValue: 
+    vector2Params: []
+    vector2ParamsNames: []
+    vector2ParamsLostDefaultValue: 
+    vector3Params: []
+    vector3ParamsNames: []
+    vector3ParamsLostDefaultValue: 
+    vector4Params: []
+    vector4ParamsNames: []
+    vector4ParamsLostDefaultValue: 
+    rectParams: []
+    rectParamsNames: []
+    rectParamsLostDefaultValue: 
+    animationCurveParams: []
+    animationCurveParamsNames: []
+    animationCurveParamsLostDefaultValue: 
+    boundsParams: []
+    boundsParamsNames: []
+    boundsParamsLostDefaultValue: 
+    gradientParams: []
+    gradientParamsNames: []
+    gradientParamsLostDefaultValue: 
+    quaternionParams: []
+    quaternionParamsNames: []
+    quaternionParamsLostDefaultValue: 

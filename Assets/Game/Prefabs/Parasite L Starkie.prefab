@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf65afe1f34d4040a7f83f7fb7b72d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieBase
-  alertDuration: 10
+  alertDuration: 20
 --- !u!1 &3561942117183716891
 GameObject:
   m_ObjectHideFlags: 0

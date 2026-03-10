@@ -70,7 +70,7 @@ MonoBehaviour:
     <SequenceNode id=\"26\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode
     id=\"24\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
     <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <ConditionEvalNode
-    id=\"64\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"Screamer/PlayerInRange\">\r\n     
+    id=\"64\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"Screamer/PlayerInRange\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"Range Threshold\"
     type=\"System.Single\" isBlackboard=\"True\" blackboard=\"Safe Distance\" />\r\n       
     </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
@@ -90,20 +90,22 @@ MonoBehaviour:
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"Scream Radius\"
     type=\"System.Single\" isBlackboard=\"True\" blackboard=\"Scream Radius\" />\r\n         
     <entry name=\"Zombie Layer\" type=\"UnityEngine.LayerMask\" isBlackboard=\"True\"
-    blackboard=\"Zombie Layer\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
-    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode
-    id=\"12\" action=\"Basic/WaitForSeconds\">\r\n      <inputParams>\r\n       
-    <inputValues>\r\n          <entry name=\"seconds\" type=\"System.Single\" isBlackboard=\"True\"
-    blackboard=\"Scream Wait Time\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
-    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ConditionNode
-    id=\"38\">\r\n      <condition>\r\n        <ConditionEvalNode id=\"0\" />\r\n     
-    </condition>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
-    />\r\n    </ConditionNode>\r\n    <ActionNode id=\"24\" action=\"Zombie/Die\">\r\n     
+    blackboard=\"Zombie Layer\" />\r\n          <entry name=\"Scream Clip\" type=\"UnityEngine.AudioClip\"
+    isBlackboard=\"True\" blackboard=\"Scream Clip\" />\r\n          <entry name=\"Rotate
+    Duration\" type=\"System.Single\" isBlackboard=\"True\" blackboard=\"Rotate Duration\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"12\" action=\"Basic/WaitForSeconds\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"seconds\" type=\"System.Single\"
+    isBlackboard=\"True\" blackboard=\"Scream Wait Time\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
+    <ConditionNode id=\"38\">\r\n      <condition>\r\n        <ConditionEvalNode
+    id=\"0\" />\r\n      </condition>\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ConditionNode>\r\n    <ActionNode id=\"24\"
+    action=\"Zombie/Die\">\r\n      <inputParams />\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"13\" action=\"Zombie/Alert\">\r\n     
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"13\" action=\"Zombie/Alert\">\r\n      <inputParams />\r\n     
-    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode
-    id=\"0\" policy=\"ATOMIC_CHECK\" name=\"Zombie/IsAlerted\">\r\n      <inputParams
-    />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n 
+    <ConditionEvalNode id=\"0\" policy=\"ATOMIC_CHECK\" name=\"Zombie/IsAlerted\">\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n 
     </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"ScreamerZombie\"
     _description=\"\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n       
     <elem>\r\n          <ActionNode id=\"2\" />\r\n        </elem>\r\n        <elem>\r\n         
@@ -159,7 +161,7 @@ MonoBehaviour:
     children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"53\" />\r\n         
     <ParallelNode id=\"71\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
-    <NotDecorator id=\"37\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    <NotDecorator id=\"37\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
     position=\"1271.965 282.0464\" name=\"Not\" description=\"Negates the result
     of the execution\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <NotDecorator id=\"37\" />\r\n          <SequenceNode
@@ -201,7 +203,7 @@ MonoBehaviour:
     537.9238\" name=\"Screamer/Flee\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"5\" />\r\n          <SequenceNode
     id=\"55\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"11\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    <ActionNode id=\"11\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
     position=\"927.597 541.5839\" name=\"Screamer/Scream\" description=\"\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"11\" />\r\n          <SequenceNode id=\"55\" />\r\n        </data>\r\n     

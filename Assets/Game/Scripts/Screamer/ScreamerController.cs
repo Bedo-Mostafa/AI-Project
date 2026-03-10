@@ -13,6 +13,13 @@ public class ScreamerController : MonoBehaviour, IShootableObject
     [Header("Dynamic References")]
     public GameObject player;
 
+    [Header("Audio")]
+    public AudioClip screamClip;
+
+    [Header("Scream Settings")]
+    public float rotateDuration = 0.5f;
+    public float soundDelay = 1f;
+
     private NavMeshAgent agent;
     private Animator animator;
 
@@ -56,5 +63,42 @@ public class ScreamerController : MonoBehaviour, IShootableObject
         if (GameManager.Instance != null) GameManager.Instance.ZombieDied();
 
         Destroy(gameObject, 5f);
+    }
+
+    public void Scream()
+    {
+        if (player != null)
+            StartCoroutine(RotateTowardsPlayer());
+
+        if (screamClip != null)
+            StartCoroutine(DelayedScreamSound());
+    }
+
+    private IEnumerator RotateTowardsPlayer()
+    {
+        Vector3 direction = player.transform.position - transform.position;
+        direction.y = 0;
+
+        if (direction.magnitude < 0.1f) yield break;
+
+        Quaternion startRot = transform.rotation;
+        Quaternion targetRot = Quaternion.LookRotation(direction);
+        float elapsed = 0f;
+
+        while (elapsed < rotateDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / rotateDuration);
+            transform.rotation = Quaternion.Slerp(startRot, targetRot, t);
+            yield return null;
+        }
+
+        transform.rotation = targetRot;
+    }
+
+    private IEnumerator DelayedScreamSound()
+    {
+        yield return new WaitForSeconds(soundDelay);
+        AudioSource.PlayClipAtPoint(screamClip, transform.position);
     }
 }
