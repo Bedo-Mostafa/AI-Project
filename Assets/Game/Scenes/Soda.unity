@@ -133,9 +133,9 @@ GameObject:
   - component: {fileID: 413966885}
   - component: {fileID: 413966890}
   - component: {fileID: 413966884}
-  - component: {fileID: 413966889}
   - component: {fileID: 413966891}
   - component: {fileID: 413966892}
+  - component: {fileID: 413966889}
   m_Layer: 6
   m_Name: Screamer
   m_TagString: Untagged
@@ -254,7 +254,7 @@ Transform:
   m_GameObject: {fileID: 413966883}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.21971, y: 1, z: 1.662}
+  m_LocalPosition: {x: 9, y: 1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -919,7 +919,7 @@ Transform:
   m_GameObject: {fileID: 2029841696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.1, y: 1, z: 84.7}
+  m_LocalPosition: {x: -0.6, y: 0.5, z: 76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

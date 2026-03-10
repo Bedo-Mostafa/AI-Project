@@ -13,14 +13,14 @@ public class FleeAction : GOAction
     private NavMeshAgent agent;
     private Animator animator;
     private Vector3 fleeTarget;
-    private ZombieController controller;
+    private ScreamerController controller;
     private GameObject player;
 
     public override void OnStart()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         animator = gameObject.GetComponent<Animator>();
-        controller = gameObject.GetComponent<ZombieController>();
+        controller = gameObject.GetComponent<ScreamerController>();
         player = controller.player;
 
         PickFleeTarget();
