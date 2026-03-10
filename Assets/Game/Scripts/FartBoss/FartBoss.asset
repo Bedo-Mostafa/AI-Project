@@ -74,7 +74,7 @@ MonoBehaviour:
     <children>\r\n        <elem>\r\n          <ActionNode id=\"14\" />\r\n       
     </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
     />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <ConditionEvalNode
-    id=\"16\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"FartBoss/IsDead\">\r\n     
+    id=\"16\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"FartBoss/IsDead\">\r\n     
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <SequenceNode id=\"15\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode
     id=\"17\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
@@ -96,7 +96,7 @@ MonoBehaviour:
     Holder\" />\r\n          <entry name=\"Spawn Point Holder\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"True\" blackboard=\"Spawn Point Holder\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
-    <ConditionEvalNode id=\"34\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"AlwaysTrue\">\r\n     
+    <ConditionEvalNode id=\"34\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"AlwaysTrue\">\r\n     
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
     <ActionNode id=\"5\" action=\"Zombie/Chase\">\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"Player\" type=\"UnityEngine.GameObject\"
@@ -253,6 +253,6 @@ MonoBehaviour:
     </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"29\" _removeIfClosed=\"False\">\r\n     
     <_rootList />\r\n      <_nodes>\r\n        <nodes />\r\n      </_nodes>\r\n   
     </BehaviorTree>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.7
+  zoom: 0.5
   subslist: []
   _guid: 69e809f15eb73f149becbc916011a1a1
