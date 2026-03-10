@@ -3,8 +3,12 @@ using UnityEngine;
 using UnityEngine.AI;
 using XtremeFPS.Interfaces;
 
-public class FartBossController : MonoBehaviour, IShootableObject
+public class FartBossController : MonoBehaviour, IShootableObject, IEnemyController
 {
+    // This satisfies the interface requirement
+    [SerializeField] private GameObject _player;
+    public GameObject player => _player;
+
     [Header("Stats")]
     public float health = 300f; // Give the boss more health!
     public bool isDead = false;
@@ -17,17 +21,9 @@ public class FartBossController : MonoBehaviour, IShootableObject
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
-        // Disable automatic position updates so the Animator's Root Motion controls movement
-        if (agent != null) agent.updatePosition = false;
-    }
-
-    void OnAnimatorMove()
-    {
-        // Sync the NavMeshAgent position with the physical animation movement
-        if (animator != null && agent != null && agent.isActiveAndEnabled && !isDead)
+        if (_player == null)
         {
-            transform.position = animator.rootPosition;
-            agent.nextPosition = transform.position;
+            _player = GameObject.FindGameObjectWithTag("Player");
         }
     }
 

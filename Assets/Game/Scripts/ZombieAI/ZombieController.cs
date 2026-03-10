@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 using XtremeFPS.Interfaces;
 
-public class ZombieController : MonoBehaviour, IShootableObject
+public class ZombieController : MonoBehaviour, IShootableObject, IEnemyController
 {
+    // This satisfies the interface requirement
+    [SerializeField] private GameObject _player;
+    public GameObject player => _player;
     #region Variables
     [Header("Stats")]
     public float health = 100f;
@@ -13,7 +16,7 @@ public class ZombieController : MonoBehaviour, IShootableObject
 
     [Header("Dynamic References")]
     public Transform[] waypoints;
-    public GameObject player; // Now stored here for the Action to reference
+    // public GameObject player; // Now stored here for the Action to reference
     [HideInInspector] public int currentWaypointIndex = 0;
 
     private NavMeshAgent agent;
@@ -28,8 +31,10 @@ public class ZombieController : MonoBehaviour, IShootableObject
         animator = GetComponent<Animator>();
 
         // 1. Dynamically find the Player
-        player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null) Debug.LogError($"{gameObject.name} could not find an object tagged 'Player'!");
+        if (_player == null)
+        {
+            _player = GameObject.FindGameObjectWithTag("Player");
+        }
 
         // 2. Dynamically find all Waypoints
         // This finds all GameObjects with the "Waypoint" tag and gets their Transforms

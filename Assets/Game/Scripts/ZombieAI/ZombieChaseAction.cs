@@ -8,7 +8,6 @@ using BBUnity.Actions;
 public class ZombieChaseAction : GOAction
 {
     private GameObject player;
-    private ZombieController controller;
     private NavMeshAgent agent;
     private Animator animator;
 
@@ -16,12 +15,12 @@ public class ZombieChaseAction : GOAction
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         animator = gameObject.GetComponent<Animator>();
-        controller = gameObject.GetComponent<ZombieController>();
 
-        // Grab the player reference that the controller found at Start
-        if (controller != null)
+        // This one line replaces all the if/else checks!
+        IEnemyController anyController = gameObject.GetComponent<IEnemyController>();
+        if (anyController != null)
         {
-            player = controller.player;
+            player = anyController.player;
         }
     }
 
